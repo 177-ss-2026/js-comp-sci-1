@@ -1,0 +1,86 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.3.12/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true,
+    "defaultBranch": "main"
+  },
+  "files": {
+    "ignoreUnknown": true,
+    "includes": ["**/*.js", "**/*.json", "!node_modules"]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "suspicious": {
+        "noUnknownAtRules": "off",
+        "noVar": "error"
+      },
+      "style": {
+        "useConst": "error",
+        "useSingleVarDeclarator": "error",
+        "useNamingConvention": {
+          "level": "error",
+          "options": {
+            "strictCase": true,
+            "requireAscii": true,
+            "conventions": [
+              {
+                "selector": { "kind": "variable" },
+                "formats": ["camelCase", "CONSTANT_CASE"]
+              },
+              {
+                "selector": { "kind": "function" },
+                "formats": ["camelCase", "PascalCase"]
+              },
+              {
+                "selector": { "kind": "const", "scope": "global" },
+                "formats": ["CONSTANT_CASE"]
+              },
+              {
+                "selector": {
+                  "kind": "classProperty",
+                  "modifiers": ["static", "readonly"]
+                },
+                "formats": ["CONSTANT_CASE"]
+              },
+              {
+                "selector": { "kind": "classMember", "modifiers": ["private"] },
+                "match": "_(.+)"
+              },
+              {
+                "selector": { "kind": "classMember", "modifiers": ["private"] },
+                "formats": ["camelCase"]
+              }
+            ]
+          }
+        },
+        "useFilenamingConvention": {
+          "level": "error",
+          "options": {
+            "strictCase": true,
+            "requireAscii": true,
+            "filenameCases": ["kebab-case"]
+          }
+        }
+      },
+      "correctness": {
+        "noInnerDeclarations": "error"
+      }
+    }
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  }
+}

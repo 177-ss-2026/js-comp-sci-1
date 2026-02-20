@@ -1,0 +1,14 @@
+{
+  "name": "bun-biome-template",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "bun run index.js",
+    "lint": "biome lint .",
+    "format": "biome format --write ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.12"
+  }
+}
