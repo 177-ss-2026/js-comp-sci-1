@@ -4,6 +4,10 @@ Exercises for the [Computer Science Fundamentals](https://www.learnjs.tech/js-co
 
 Work through this file top to bottom. Read the lesson section first, then complete the exercises here. Run your file after each section to check your output, then commit before moving on.
 
+## Quiet Copilot!
+
+Disable/snooze your Copilot for 5 minutes by clicking the Copilot icon in the bottom bar and selecting "Snooze for 5 minutes". This will help you focus on understanding the concepts without relying on AI suggestions.
+
 ## Setup
 
 ```bash
